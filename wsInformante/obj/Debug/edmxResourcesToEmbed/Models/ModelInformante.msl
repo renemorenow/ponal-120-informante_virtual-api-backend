@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelInformanteStoreContainer" CdmEntityContainer="EntitiesInformante">
+    <EntitySetMapping Name="APP_VI_CONTRIBUTIONS">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS">
+        <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS">
+          <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
+          <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="INFORMANT_ID" ColumnName="INFORMANT_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_CONTRIBUTIONS_FILES">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS_FILES">
+        <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS_FILES">
+          <ScalarProperty Name="CONTRIBUTION_FILE_ID" ColumnName="CONTRIBUTION_FILE_ID" />
+          <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
+          <ScalarProperty Name="PATH" ColumnName="PATH" />
+          <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_CRIMES">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_CRIMES">
+        <MappingFragment StoreEntitySet="APP_VI_CRIMES">
+          <ScalarProperty Name="CRIME_ID" ColumnName="CRIME_ID" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="LEGAL_INFORMATION" ColumnName="LEGAL_INFORMATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_INFORMANTS">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_INFORMANTS">
+        <MappingFragment StoreEntitySet="APP_VI_INFORMANTS">
+          <ScalarProperty Name="INFORMANT_ID" ColumnName="INFORMANT_ID" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_INVESTIGA_INVESTIGATORS">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGA_INVESTIGATORS">
+        <MappingFragment StoreEntitySet="APP_VI_INVESTIGA_INVESTIGATORS">
+          <ScalarProperty Name="INVESTIGATION_INVESTIGATOR_ID" ColumnName="INVESTIGATION_INVESTIGATOR_ID" />
+          <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
+          <ScalarProperty Name="INVESTIGATOR_ID" ColumnName="INVESTIGATOR_ID" />
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_INVESTIGATION_FILES">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATION_FILES">
+        <MappingFragment StoreEntitySet="APP_VI_INVESTIGATION_FILES">
+          <ScalarProperty Name="INVESTIGATION_FILE_ID" ColumnName="INVESTIGATION_FILE_ID" />
+          <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
+          <ScalarProperty Name="PATH" ColumnName="PATH" />
+          <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_INVESTIGATIONS">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATIONS">
+        <MappingFragment StoreEntitySet="APP_VI_INVESTIGATIONS">
+          <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
+          <ScalarProperty Name="CRIME_ID" ColumnName="CRIME_ID" />
+          <ScalarProperty Name="NUNC" ColumnName="NUNC" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APP_VI_INVESTIGATORS">
+      <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATORS">
+        <MappingFragment StoreEntitySet="APP_VI_INVESTIGATORS">
+          <ScalarProperty Name="INVESTIGATOR_ID" ColumnName="INVESTIGATOR_ID" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="INSTITUTION" ColumnName="INSTITUTION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

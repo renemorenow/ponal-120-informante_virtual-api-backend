@@ -1,0 +1,180 @@
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ApplicationInsights.config
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\csc.exe
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\vbc.exe
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\VBCSCompiler.exe
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\wsInformante.dll.config
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\wsInformante.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\wsInformante.pdb
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Antlr3.Runtime.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\EntityFramework.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\EntityFramework.SqlServer.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.Web.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.ApplicationInsights.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Newtonsoft.Json.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Oracle.ManagedDataAccess.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Client.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Common.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Interfaces.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Text.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Swashbuckle.Core.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Net.Http.Formatting.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Cors.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Helpers.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.Cors.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.WebHost.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Mvc.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Optimization.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Razor.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.Deployment.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.Razor.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\WebActivatorEx.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\WebGrease.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\EntityFramework.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\EntityFramework.SqlServer.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.Web.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.ApplicationInsights.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Newtonsoft.Json.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Client.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Common.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Interfaces.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\ServiceStack.Text.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Net.Http.Formatting.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.Cors.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Helpers.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Http.WebHost.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Mvc.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Optimization.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.Razor.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.Deployment.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\System.Web.WebPages.Razor.xml
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\Antlr3.Runtime.pdb
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Http.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Helpers.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Mvc.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Optimization.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.Razor.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.WebPages.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\obj\Debug\wsInformante.csprojResolveAssemblyReference.cache
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\obj\Debug\wsInformante.dll
+C:\Users\william.moreno\documents\visual studio 2015\Projects\wsInformante\wsInformante\obj\Debug\wsInformante.pdb
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ApplicationInsights.config
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\csc.exe
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.CSharp.Core.targets
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\System.Collections.Immutable.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\System.Reflection.Metadata.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\vbc.exe
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\VBCSCompiler.exe
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\roslyn\VBCSCompiler.exe.config
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\wsInformante.dll.config
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\wsInformante.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\wsInformante.pdb
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Antlr3.Runtime.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\EntityFramework.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\EntityFramework.SqlServer.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.Agent.Intercept.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.DependencyCollector.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.PerfCounterCollector.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.Web.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.WindowsServer.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.ApplicationInsights.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.Web.Infrastructure.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Newtonsoft.Json.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Oracle.ManagedDataAccess.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Client.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Common.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Interfaces.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Text.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Swashbuckle.Core.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Net.Http.Formatting.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Cors.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Helpers.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.Cors.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.WebHost.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Mvc.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Optimization.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Razor.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.Deployment.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.Razor.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\WebActivatorEx.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\WebGrease.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\EntityFramework.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\EntityFramework.SqlServer.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.DependencyCollector.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.Web.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.AI.WindowsServer.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.ApplicationInsights.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Newtonsoft.Json.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Client.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Common.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Interfaces.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\ServiceStack.Text.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Net.Http.Formatting.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.Cors.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Helpers.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Http.WebHost.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Mvc.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Optimization.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.Razor.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.Deployment.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\System.Web.WebPages.Razor.xml
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\Antlr3.Runtime.pdb
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Net.Http.Formatting.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Http.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Helpers.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Http.WebHost.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Mvc.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Optimization.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.Razor.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.WebPages.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.WebPages.Deployment.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\bin\es\System.Web.WebPages.Razor.resources.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\obj\Debug\wsInformante.csprojResolveAssemblyReference.cache
+Y:\Dev\FullStack\wsInformante\wsInformante\obj\Debug\wsInformante.dll
+Y:\Dev\FullStack\wsInformante\wsInformante\obj\Debug\wsInformante.pdb

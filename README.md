@@ -7,6 +7,10 @@
 - **MAURO STEPHANO VIZCAINO RODRIGUREZ** 
 >Ingeniero de sistemas, experiencia en desarrollo de sistemas de información en Tecnología Visual Basic .Net y desarrollo sobre base de datos Oracle PLsql.
 - **WILLIAM RENE MORENO ROMERO** 
+<<<<<<< HEAD
 >Ingeniero de sistemas, experiencia en desarrollo de sistemas de información en Tecnología Visual Basic .Net, C#, JavaScrip y desarrollo sobre base de datos Oracle PLsql.
+=======
+>Ingeniero de sistemas, experiencia en desarrollo de sistemas de información en Tecnología Visual Basic .Net, C#, JavaScrip y desarrollo sobre base de datos Oracle PlSql.
+>>>>>>> beta
 - **RAFAEL ANTONIO CAMARGO DIAZ** 
 >Descripción breve del perfil profesional y su experiencia en tecnología y/o sistemas.

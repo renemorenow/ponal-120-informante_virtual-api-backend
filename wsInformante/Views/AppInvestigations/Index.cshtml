@@ -1,0 +1,69 @@
+﻿@model IEnumerable<wsInformante.Models.APP_VI_INVESTIGATIONS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NUNC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TITLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VI_CRIMES.DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRIME_DATE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUNC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TITLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.STATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VI_CRIMES.DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRIME_DATE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.INVESTIGATION_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.INVESTIGATION_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.INVESTIGATION_ID })
+        </td>
+    </tr>
+}
+
+</table>

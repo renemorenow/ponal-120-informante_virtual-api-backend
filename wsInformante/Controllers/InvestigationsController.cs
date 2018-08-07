@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -8,21 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
 using wsInformante.Models;
-using ServiceStack.Text;
-using System.Configuration.Provider;
 
 namespace wsInformante.Controllers
 {
-    //[RoutePrefix("api/Investigations")]
     public class InvestigationsController : ApiController
     {
-        public InvestigationsController()
-        {
-        }
         private EntitiesInformante db = new EntitiesInformante();
 
         // GET: api/Investigations
@@ -40,8 +32,6 @@ namespace wsInformante.Controllers
             {
                 return NotFound();
             }
-                        
-            var result = JsonConvert.SerializeObject(aPP_VI_INVESTIGATIONS);
 
             return Ok(aPP_VI_INVESTIGATIONS);
         }
@@ -83,7 +73,6 @@ namespace wsInformante.Controllers
 
         // POST: api/Investigations
         [ResponseType(typeof(APP_VI_INVESTIGATIONS))]
-        //[Route("Investigations")]
         public async Task<IHttpActionResult> PostAPP_VI_INVESTIGATIONS(APP_VI_INVESTIGATIONS aPP_VI_INVESTIGATIONS)
         {
             if (!ModelState.IsValid)

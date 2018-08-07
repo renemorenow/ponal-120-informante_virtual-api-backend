@@ -1,0 +1,66 @@
+﻿@model wsInformante.Models.APP_VI_INVESTIGATIONS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>APP_VI_INVESTIGATIONS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NUNC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUNC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TITLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TITLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VI_CRIMES.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VI_CRIMES.DESCRIPTION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.INVESTIGATION_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

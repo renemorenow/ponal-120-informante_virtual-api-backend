@@ -64,6 +64,8 @@
     <EntitySetMapping Name="APP_VI_INVESTIGATIONS">
       <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATIONS">
         <MappingFragment StoreEntitySet="APP_VI_INVESTIGATIONS">
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CRIME_DATE" ColumnName="CRIME_DATE" />
           <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
           <ScalarProperty Name="CRIME_ID" ColumnName="CRIME_ID" />
           <ScalarProperty Name="NUNC" ColumnName="NUNC" />

@@ -1,0 +1,42 @@
+﻿@model wsInformante.Models.APP_VI_CONTRIBUTIONS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>APP_VI_CONTRIBUTIONS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VI_INFORMANTS.FIRST_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VI_INFORMANTS.FIRST_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APP_VI_INVESTIGATIONS.NUNC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APP_VI_INVESTIGATIONS.NUNC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CONTRIBUTION_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

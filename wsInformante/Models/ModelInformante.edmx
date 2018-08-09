@@ -70,6 +70,8 @@
           <Property Name="DESCRIPTION" Type="varchar2" MaxLength="3000" Nullable="false" />
           <Property Name="STATE" Type="varchar2" MaxLength="50" Nullable="false" />
           <Property Name="CITY" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="CRIME_DATE" Type="date" />
+          <Property Name="STATUS" Type="number" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="APP_VI_INVESTIGATORS">
           <Key>
@@ -284,6 +286,8 @@
           <NavigationProperty Name="APP_VI_CRIMES" Relationship="Self.APP_VI_INVESTIGATIONS_CRIME_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_CRIMES" />
           <NavigationProperty Name="APP_VI_INVESTIGA_INVESTIGATORS" Relationship="Self.APP_VI_INVESTIGA_INVESTIGAT_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_INVESTIGA_INVESTIGATORS" />
           <NavigationProperty Name="APP_VI_INVESTIGATION_FILES" Relationship="Self.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_INVESTIGATION_FILES" />
+          <Property Name="CRIME_DATE" Type="DateTime" />
+          <Property Name="STATUS" Type="Decimal" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="APP_VI_INVESTIGATORS">
           <Key>
@@ -486,6 +490,8 @@
           <EntitySetMapping Name="APP_VI_INVESTIGATIONS">
             <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATIONS">
               <MappingFragment StoreEntitySet="APP_VI_INVESTIGATIONS">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="CRIME_DATE" ColumnName="CRIME_DATE" />
                 <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
                 <ScalarProperty Name="CRIME_ID" ColumnName="CRIME_ID" />
                 <ScalarProperty Name="NUNC" ColumnName="NUNC" />

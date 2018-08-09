@@ -65,6 +65,8 @@
     <Property Name="DESCRIPTION" Type="varchar2" MaxLength="3000" Nullable="false" />
     <Property Name="STATE" Type="varchar2" MaxLength="50" Nullable="false" />
     <Property Name="CITY" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CRIME_DATE" Type="date" />
+    <Property Name="STATUS" Type="number" Precision="38" Scale="0" />
   </EntityType>
   <EntityType Name="APP_VI_INVESTIGATORS">
     <Key>

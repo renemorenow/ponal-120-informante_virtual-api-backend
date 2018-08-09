@@ -1,0 +1,45 @@
+﻿@model IEnumerable<wsInformante.Models.APP_VI_INVESTIGATION_FILES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PATH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONTENT_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VI_INVESTIGATIONS.NUNC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PATH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONTENT_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VI_INVESTIGATIONS.NUNC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.INVESTIGATION_FILE_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.INVESTIGATION_FILE_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.INVESTIGATION_FILE_ID })
+        </td>
+    </tr>
+}
+
+</table>

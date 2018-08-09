@@ -1,0 +1,45 @@
+﻿@model IEnumerable<wsInformante.Models.APP_VI_CONTRIBUTIONS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VI_INFORMANTS.FIRST_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APP_VI_INVESTIGATIONS.NUNC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VI_INFORMANTS.FIRST_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APP_VI_INVESTIGATIONS.NUNC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CONTRIBUTION_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CONTRIBUTION_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CONTRIBUTION_ID })
+        </td>
+    </tr>
+}
+
+</table>

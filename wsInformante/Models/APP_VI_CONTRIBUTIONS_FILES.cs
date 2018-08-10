@@ -18,6 +18,7 @@ namespace wsInformante.Models
         public decimal CONTRIBUTION_ID { get; set; }
         public string PATH { get; set; }
         public string CONTENT_TYPE { get; set; }
+        public byte[] FILE_DOC { get; set; }
     
         public virtual APP_VI_CONTRIBUTIONS APP_VI_CONTRIBUTIONS { get; set; }
     }

@@ -18,6 +18,7 @@ namespace wsInformante.Models
         public decimal INVESTIGATION_ID { get; set; }
         public string PATH { get; set; }
         public string CONTENT_TYPE { get; set; }
+        public byte[] FILE_DOC { get; set; }
     
         public virtual APP_VI_INVESTIGATIONS APP_VI_INVESTIGATIONS { get; set; }
     }

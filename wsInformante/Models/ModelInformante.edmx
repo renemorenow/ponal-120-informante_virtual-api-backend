@@ -22,6 +22,7 @@
           <Property Name="CONTRIBUTION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
           <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="FILE_DOC" Type="blob" />
         </EntityType>
         <EntityType Name="APP_VI_CRIMES">
           <Key>
@@ -58,6 +59,7 @@
           <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
           <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+          <Property Name="FILE_DOC" Type="blob" />
         </EntityType>
         <EntityType Name="APP_VI_INVESTIGATIONS">
           <Key>
@@ -229,6 +231,7 @@
           <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="APP_VI_CONTRIBUTIONS" Relationship="Self.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS_FILES" ToRole="APP_VI_CONTRIBUTIONS" />
+          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="APP_VI_CRIMES">
           <Key>
@@ -270,6 +273,7 @@
           <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="Self.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATION_FILES" ToRole="APP_VI_INVESTIGATIONS" />
+          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="APP_VI_INVESTIGATIONS">
           <Key>
@@ -440,6 +444,7 @@
           <EntitySetMapping Name="APP_VI_CONTRIBUTIONS_FILES">
             <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS_FILES">
               <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS_FILES">
+                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
                 <ScalarProperty Name="CONTRIBUTION_FILE_ID" ColumnName="CONTRIBUTION_FILE_ID" />
                 <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
                 <ScalarProperty Name="PATH" ColumnName="PATH" />
@@ -480,6 +485,7 @@
           <EntitySetMapping Name="APP_VI_INVESTIGATION_FILES">
             <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATION_FILES">
               <MappingFragment StoreEntitySet="APP_VI_INVESTIGATION_FILES">
+                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
                 <ScalarProperty Name="INVESTIGATION_FILE_ID" ColumnName="INVESTIGATION_FILE_ID" />
                 <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
                 <ScalarProperty Name="PATH" ColumnName="PATH" />

@@ -21,6 +21,7 @@
     <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="APP_VI_CONTRIBUTIONS" Relationship="Self.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS_FILES" ToRole="APP_VI_CONTRIBUTIONS" />
+    <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="APP_VI_CRIMES">
     <Key>
@@ -62,6 +63,7 @@
     <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="Self.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATION_FILES" ToRole="APP_VI_INVESTIGATIONS" />
+    <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="APP_VI_INVESTIGATIONS">
     <Key>

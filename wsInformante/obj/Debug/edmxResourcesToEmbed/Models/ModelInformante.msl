@@ -14,6 +14,7 @@
     <EntitySetMapping Name="APP_VI_CONTRIBUTIONS_FILES">
       <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS_FILES">
         <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS_FILES">
+          <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
           <ScalarProperty Name="CONTRIBUTION_FILE_ID" ColumnName="CONTRIBUTION_FILE_ID" />
           <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
           <ScalarProperty Name="PATH" ColumnName="PATH" />
@@ -54,6 +55,7 @@
     <EntitySetMapping Name="APP_VI_INVESTIGATION_FILES">
       <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATION_FILES">
         <MappingFragment StoreEntitySet="APP_VI_INVESTIGATION_FILES">
+          <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
           <ScalarProperty Name="INVESTIGATION_FILE_ID" ColumnName="INVESTIGATION_FILE_ID" />
           <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
           <ScalarProperty Name="PATH" ColumnName="PATH" />

@@ -17,6 +17,7 @@
     <Property Name="CONTRIBUTION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
     <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FILE_DOC" Type="blob" />
   </EntityType>
   <EntityType Name="APP_VI_CRIMES">
     <Key>
@@ -53,6 +54,7 @@
     <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
     <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
     <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FILE_DOC" Type="blob" />
   </EntityType>
   <EntityType Name="APP_VI_INVESTIGATIONS">
     <Key>

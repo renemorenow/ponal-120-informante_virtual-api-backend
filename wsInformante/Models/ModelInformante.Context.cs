@@ -18,7 +18,6 @@ namespace wsInformante.Models
         public EntitiesInformante()
             : base("name=EntitiesInformante")
         {
-            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -243,6 +243,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AppContributionsController.cs" />
     <Compile Include="Controllers\AppCrimesController.cs" />
+    <Compile Include="Controllers\AppInformantsController.cs" />
     <Compile Include="Controllers\AppInvestigaInvestigatorsController.cs" />
     <Compile Include="Controllers\AppInvestigationsController.cs" />
     <Compile Include="Controllers\AppInvestigationsFilesController.cs" />
@@ -404,6 +405,11 @@
     <Content Include="Views\AppInvestigationsFiles\Details.cshtml" />
     <Content Include="Views\AppInvestigationsFiles\Edit.cshtml" />
     <Content Include="Views\AppInvestigationsFiles\Index.cshtml" />
+    <Content Include="Views\AppInformants\Create.cshtml" />
+    <Content Include="Views\AppInformants\Delete.cshtml" />
+    <Content Include="Views\AppInformants\Details.cshtml" />
+    <Content Include="Views\AppInformants\Edit.cshtml" />
+    <Content Include="Views\AppInformants\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -218,20 +218,9 @@
           <Property Name="INVESTIGATION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="DESCRIPTION" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
           <Property Name="INFORMANT_ID" Type="Decimal" Precision="38" Scale="0" />
-          <NavigationProperty Name="APP_VI_CONTRIBUTIONS_FILES" Relationship="Self.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS" ToRole="APP_VI_CONTRIBUTIONS_FILES" />
           <NavigationProperty Name="APP_VI_INFORMANTS" Relationship="Self.APP_VI_CONTRIBUTIONS_INFO_FK" FromRole="APP_VI_CONTRIBUTIONS" ToRole="APP_VI_INFORMANTS" />
           <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="Self.APP_VI_CONTRIBUTIONS_INV_FK" FromRole="APP_VI_CONTRIBUTIONS" ToRole="APP_VI_INVESTIGATIONS" />
-        </EntityType>
-        <EntityType Name="APP_VI_CONTRIBUTIONS_FILES">
-          <Key>
-            <PropertyRef Name="CONTRIBUTION_FILE_ID" />
-          </Key>
-          <Property Name="CONTRIBUTION_FILE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CONTRIBUTION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="APP_VI_CONTRIBUTIONS" Relationship="Self.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS_FILES" ToRole="APP_VI_CONTRIBUTIONS" />
-          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="APP_VI_CONTRIBUTIONS_FILES" Relationship="ModelInformante.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS" ToRole="APP_VI_CONTRIBUTIONS_FILES" />
         </EntityType>
         <EntityType Name="APP_VI_CRIMES">
           <Key>
@@ -264,17 +253,6 @@
           <NavigationProperty Name="APP_VI_INVESTIGATORS" Relationship="Self.APP_VI_INVEST_INVESTIGATOR_FK" FromRole="APP_VI_INVESTIGA_INVESTIGATORS" ToRole="APP_VI_INVESTIGATORS" />
           <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="Self.APP_VI_INVESTIGA_INVESTIGAT_FK" FromRole="APP_VI_INVESTIGA_INVESTIGATORS" ToRole="APP_VI_INVESTIGATIONS" />
         </EntityType>
-        <EntityType Name="APP_VI_INVESTIGATION_FILES">
-          <Key>
-            <PropertyRef Name="INVESTIGATION_FILE_ID" />
-          </Key>
-          <Property Name="INVESTIGATION_FILE_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="INVESTIGATION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="CONTENT_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="Self.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATION_FILES" ToRole="APP_VI_INVESTIGATIONS" />
-          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="APP_VI_INVESTIGATIONS">
           <Key>
             <PropertyRef Name="INVESTIGATION_ID" />
@@ -289,9 +267,9 @@
           <NavigationProperty Name="APP_VI_CONTRIBUTIONS" Relationship="Self.APP_VI_CONTRIBUTIONS_INV_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_CONTRIBUTIONS" />
           <NavigationProperty Name="APP_VI_CRIMES" Relationship="Self.APP_VI_INVESTIGATIONS_CRIME_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_CRIMES" />
           <NavigationProperty Name="APP_VI_INVESTIGA_INVESTIGATORS" Relationship="Self.APP_VI_INVESTIGA_INVESTIGAT_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_INVESTIGA_INVESTIGATORS" />
-          <NavigationProperty Name="APP_VI_INVESTIGATION_FILES" Relationship="Self.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_INVESTIGATION_FILES" />
           <Property Name="CRIME_DATE" Type="DateTime" />
           <Property Name="STATUS" Type="Decimal" Precision="38" Scale="0" />
+          <NavigationProperty Name="APP_VI_INVESTIGATION_FILES" Relationship="ModelInformante.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATIONS" ToRole="APP_VI_INVESTIGATION_FILES" />
         </EntityType>
         <EntityType Name="APP_VI_INVESTIGATORS">
           <Key>
@@ -303,18 +281,6 @@
           <Property Name="INSTITUTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="APP_VI_INVESTIGA_INVESTIGATORS" Relationship="Self.APP_VI_INVEST_INVESTIGATOR_FK" FromRole="APP_VI_INVESTIGATORS" ToRole="APP_VI_INVESTIGA_INVESTIGATORS" />
         </EntityType>
-        <Association Name="APP_VI_CONTRIBUTIONS_FILES__FK">
-          <End Role="APP_VI_CONTRIBUTIONS" Type="Self.APP_VI_CONTRIBUTIONS" Multiplicity="1" />
-          <End Role="APP_VI_CONTRIBUTIONS_FILES" Type="Self.APP_VI_CONTRIBUTIONS_FILES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="APP_VI_CONTRIBUTIONS">
-              <PropertyRef Name="CONTRIBUTION_ID" />
-            </Principal>
-            <Dependent Role="APP_VI_CONTRIBUTIONS_FILES">
-              <PropertyRef Name="CONTRIBUTION_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="APP_VI_CONTRIBUTIONS_INFO_FK">
           <End Role="APP_VI_INFORMANTS" Type="Self.APP_VI_INFORMANTS" Multiplicity="0..1" />
           <End Role="APP_VI_CONTRIBUTIONS" Type="Self.APP_VI_CONTRIBUTIONS" Multiplicity="*" />
@@ -375,31 +341,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="APP_VI_INVESTIGA_FILE_INV_FK">
-          <End Role="APP_VI_INVESTIGATIONS" Type="Self.APP_VI_INVESTIGATIONS" Multiplicity="1" />
-          <End Role="APP_VI_INVESTIGATION_FILES" Type="Self.APP_VI_INVESTIGATION_FILES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="APP_VI_INVESTIGATIONS">
-              <PropertyRef Name="INVESTIGATION_ID" />
-            </Principal>
-            <Dependent Role="APP_VI_INVESTIGATION_FILES">
-              <PropertyRef Name="INVESTIGATION_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="EntitiesInformante" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="APP_VI_CONTRIBUTIONS" EntityType="Self.APP_VI_CONTRIBUTIONS" />
-          <EntitySet Name="APP_VI_CONTRIBUTIONS_FILES" EntityType="Self.APP_VI_CONTRIBUTIONS_FILES" />
           <EntitySet Name="APP_VI_CRIMES" EntityType="Self.APP_VI_CRIMES" />
           <EntitySet Name="APP_VI_INFORMANTS" EntityType="Self.APP_VI_INFORMANTS" />
           <EntitySet Name="APP_VI_INVESTIGA_INVESTIGATORS" EntityType="Self.APP_VI_INVESTIGA_INVESTIGATORS" />
-          <EntitySet Name="APP_VI_INVESTIGATION_FILES" EntityType="Self.APP_VI_INVESTIGATION_FILES" />
           <EntitySet Name="APP_VI_INVESTIGATIONS" EntityType="Self.APP_VI_INVESTIGATIONS" />
           <EntitySet Name="APP_VI_INVESTIGATORS" EntityType="Self.APP_VI_INVESTIGATORS" />
-          <AssociationSet Name="APP_VI_CONTRIBUTIONS_FILES__FK" Association="Self.APP_VI_CONTRIBUTIONS_FILES__FK">
-            <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
-            <End Role="APP_VI_CONTRIBUTIONS_FILES" EntitySet="APP_VI_CONTRIBUTIONS_FILES" />
-          </AssociationSet>
           <AssociationSet Name="APP_VI_CONTRIBUTIONS_INFO_FK" Association="Self.APP_VI_CONTRIBUTIONS_INFO_FK">
             <End Role="APP_VI_INFORMANTS" EntitySet="APP_VI_INFORMANTS" />
             <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
@@ -420,11 +368,63 @@
             <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
             <End Role="APP_VI_INVESTIGA_INVESTIGATORS" EntitySet="APP_VI_INVESTIGA_INVESTIGATORS" />
           </AssociationSet>
-          <AssociationSet Name="APP_VI_INVESTIGA_FILE_INV_FK" Association="Self.APP_VI_INVESTIGA_FILE_INV_FK">
+          <EntitySet Name="APP_VI_CONTRIBUTIONS_FILES" EntityType="ModelInformante.APP_VI_CONTRIBUTIONS_FILES" />
+          <EntitySet Name="APP_VI_INVESTIGATION_FILES" EntityType="ModelInformante.APP_VI_INVESTIGATION_FILES" />
+          <AssociationSet Name="APP_VI_CONTRIBUTIONS_FILES__FK" Association="ModelInformante.APP_VI_CONTRIBUTIONS_FILES__FK">
+            <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
+            <End Role="APP_VI_CONTRIBUTIONS_FILES" EntitySet="APP_VI_CONTRIBUTIONS_FILES" />
+          </AssociationSet>
+          <AssociationSet Name="APP_VI_INVESTIGA_FILE_INV_FK" Association="ModelInformante.APP_VI_INVESTIGA_FILE_INV_FK">
             <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
             <End Role="APP_VI_INVESTIGATION_FILES" EntitySet="APP_VI_INVESTIGATION_FILES" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="APP_VI_CONTRIBUTIONS_FILES">
+          <Key>
+            <PropertyRef Name="CONTRIBUTION_FILE_ID" />
+          </Key>
+          <Property Name="CONTRIBUTION_FILE_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CONTRIBUTION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="PATH" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CONTENT_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="APP_VI_CONTRIBUTIONS" Relationship="ModelInformante.APP_VI_CONTRIBUTIONS_FILES__FK" FromRole="APP_VI_CONTRIBUTIONS_FILES" ToRole="APP_VI_CONTRIBUTIONS" />
+        </EntityType>
+        <EntityType Name="APP_VI_INVESTIGATION_FILES">
+          <Key>
+            <PropertyRef Name="INVESTIGATION_FILE_ID" />
+          </Key>
+          <Property Name="INVESTIGATION_FILE_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="INVESTIGATION_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="PATH" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CONTENT_TYPE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FILE_DOC" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="APP_VI_INVESTIGATIONS" Relationship="ModelInformante.APP_VI_INVESTIGA_FILE_INV_FK" FromRole="APP_VI_INVESTIGATION_FILES" ToRole="APP_VI_INVESTIGATIONS" />
+        </EntityType>
+        <Association Name="APP_VI_CONTRIBUTIONS_FILES__FK">
+          <End Type="ModelInformante.APP_VI_CONTRIBUTIONS" Role="APP_VI_CONTRIBUTIONS" Multiplicity="1" />
+          <End Type="ModelInformante.APP_VI_CONTRIBUTIONS_FILES" Role="APP_VI_CONTRIBUTIONS_FILES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APP_VI_CONTRIBUTIONS">
+              <PropertyRef Name="CONTRIBUTION_ID" />
+            </Principal>
+            <Dependent Role="APP_VI_CONTRIBUTIONS_FILES">
+              <PropertyRef Name="CONTRIBUTION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="APP_VI_INVESTIGA_FILE_INV_FK">
+          <End Type="ModelInformante.APP_VI_INVESTIGATIONS" Role="APP_VI_INVESTIGATIONS" Multiplicity="1" />
+          <End Type="ModelInformante.APP_VI_INVESTIGATION_FILES" Role="APP_VI_INVESTIGATION_FILES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APP_VI_INVESTIGATIONS">
+              <PropertyRef Name="INVESTIGATION_ID" />
+            </Principal>
+            <Dependent Role="APP_VI_INVESTIGATION_FILES">
+              <PropertyRef Name="INVESTIGATION_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -438,17 +438,6 @@
                 <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
                 <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
                 <ScalarProperty Name="INFORMANT_ID" ColumnName="INFORMANT_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="APP_VI_CONTRIBUTIONS_FILES">
-            <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS_FILES">
-              <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS_FILES">
-                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
-                <ScalarProperty Name="CONTRIBUTION_FILE_ID" ColumnName="CONTRIBUTION_FILE_ID" />
-                <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
-                <ScalarProperty Name="PATH" ColumnName="PATH" />
-                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -482,17 +471,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="APP_VI_INVESTIGATION_FILES">
-            <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATION_FILES">
-              <MappingFragment StoreEntitySet="APP_VI_INVESTIGATION_FILES">
-                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
-                <ScalarProperty Name="INVESTIGATION_FILE_ID" ColumnName="INVESTIGATION_FILE_ID" />
-                <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
-                <ScalarProperty Name="PATH" ColumnName="PATH" />
-                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="APP_VI_INVESTIGATIONS">
             <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATIONS">
               <MappingFragment StoreEntitySet="APP_VI_INVESTIGATIONS">
@@ -515,6 +493,28 @@
                 <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
                 <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
                 <ScalarProperty Name="INSTITUTION" ColumnName="INSTITUTION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APP_VI_CONTRIBUTIONS_FILES">
+            <EntityTypeMapping TypeName="ModelInformante.APP_VI_CONTRIBUTIONS_FILES">
+              <MappingFragment StoreEntitySet="APP_VI_CONTRIBUTIONS_FILES">
+                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
+                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+                <ScalarProperty Name="PATH" ColumnName="PATH" />
+                <ScalarProperty Name="CONTRIBUTION_ID" ColumnName="CONTRIBUTION_ID" />
+                <ScalarProperty Name="CONTRIBUTION_FILE_ID" ColumnName="CONTRIBUTION_FILE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APP_VI_INVESTIGATION_FILES">
+            <EntityTypeMapping TypeName="ModelInformante.APP_VI_INVESTIGATION_FILES">
+              <MappingFragment StoreEntitySet="APP_VI_INVESTIGATION_FILES">
+                <ScalarProperty Name="FILE_DOC" ColumnName="FILE_DOC" />
+                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+                <ScalarProperty Name="PATH" ColumnName="PATH" />
+                <ScalarProperty Name="INVESTIGATION_ID" ColumnName="INVESTIGATION_ID" />
+                <ScalarProperty Name="INVESTIGATION_FILE_ID" ColumnName="INVESTIGATION_FILE_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

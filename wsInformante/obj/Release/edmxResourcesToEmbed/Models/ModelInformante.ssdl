@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelInformante.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="APP_VI_CONTRIBUTIONS">
+    <Key>
+      <PropertyRef Name="CONTRIBUTION_ID" />
+    </Key>
+    <Property Name="CONTRIBUTION_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="4000" />
+    <Property Name="INFORMANT_ID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="APP_VI_CONTRIBUTIONS_FILES">
+    <Key>
+      <PropertyRef Name="CONTRIBUTION_FILE_ID" />
+    </Key>
+    <Property Name="CONTRIBUTION_FILE_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONTRIBUTION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
+    <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FILE_DOC" Type="blob" />
+  </EntityType>
+  <EntityType Name="APP_VI_CRIMES">
+    <Key>
+      <PropertyRef Name="CRIME_ID" />
+    </Key>
+    <Property Name="CRIME_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="500" Nullable="false" />
+    <Property Name="LEGAL_INFORMATION" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="APP_VI_INFORMANTS">
+    <Key>
+      <PropertyRef Name="INFORMANT_ID" />
+    </Key>
+    <Property Name="INFORMANT_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LAST_NAME" Type="varchar2" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="PHONE_NUMBER" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="APP_VI_INVESTIGA_INVESTIGATORS">
+    <Key>
+      <PropertyRef Name="INVESTIGATION_INVESTIGATOR_ID" />
+    </Key>
+    <Property Name="INVESTIGATION_INVESTIGATOR_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="INVESTIGATOR_ID" Type="number" Precision="38" Scale="0" />
+    <Property Name="IS_ACTIVE" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="APP_VI_INVESTIGATION_FILES">
+    <Key>
+      <PropertyRef Name="INVESTIGATION_FILE_ID" />
+    </Key>
+    <Property Name="INVESTIGATION_FILE_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PATH" Type="varchar2" MaxLength="500" Nullable="false" />
+    <Property Name="CONTENT_TYPE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FILE_DOC" Type="blob" />
+  </EntityType>
+  <EntityType Name="APP_VI_INVESTIGATIONS">
+    <Key>
+      <PropertyRef Name="INVESTIGATION_ID" />
+    </Key>
+    <Property Name="INVESTIGATION_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CRIME_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NUNC" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="TITLE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar2" MaxLength="3000" Nullable="false" />
+    <Property Name="STATE" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CITY" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="CRIME_DATE" Type="date" />
+    <Property Name="STATUS" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="APP_VI_INVESTIGATORS">
+    <Key>
+      <PropertyRef Name="INVESTIGATOR_ID" />
+    </Key>
+    <Property Name="INVESTIGATOR_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="LAST_NAME" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="INSTITUTION" Type="varchar2" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="APP_VI_CONTRIBUTIONS_FILES__FK">
+    <End Role="APP_VI_CONTRIBUTIONS" Type="Self.APP_VI_CONTRIBUTIONS" Multiplicity="1" />
+    <End Role="APP_VI_CONTRIBUTIONS_FILES" Type="Self.APP_VI_CONTRIBUTIONS_FILES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_CONTRIBUTIONS">
+        <PropertyRef Name="CONTRIBUTION_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_CONTRIBUTIONS_FILES">
+        <PropertyRef Name="CONTRIBUTION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_CONTRIBUTIONS_INFO_FK">
+    <End Role="APP_VI_INFORMANTS" Type="Self.APP_VI_INFORMANTS" Multiplicity="0..1" />
+    <End Role="APP_VI_CONTRIBUTIONS" Type="Self.APP_VI_CONTRIBUTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_INFORMANTS">
+        <PropertyRef Name="INFORMANT_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_CONTRIBUTIONS">
+        <PropertyRef Name="INFORMANT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_CONTRIBUTIONS_INV_FK">
+    <End Role="APP_VI_INVESTIGATIONS" Type="Self.APP_VI_INVESTIGATIONS" Multiplicity="1" />
+    <End Role="APP_VI_CONTRIBUTIONS" Type="Self.APP_VI_CONTRIBUTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_INVESTIGATIONS">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_CONTRIBUTIONS">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_INVEST_INVESTIGATOR_FK">
+    <End Role="APP_VI_INVESTIGATORS" Type="Self.APP_VI_INVESTIGATORS" Multiplicity="0..1" />
+    <End Role="APP_VI_INVESTIGA_INVESTIGATORS" Type="Self.APP_VI_INVESTIGA_INVESTIGATORS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_INVESTIGATORS">
+        <PropertyRef Name="INVESTIGATOR_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_INVESTIGA_INVESTIGATORS">
+        <PropertyRef Name="INVESTIGATOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_INVESTIGA_FILE_INV_FK">
+    <End Role="APP_VI_INVESTIGATIONS" Type="Self.APP_VI_INVESTIGATIONS" Multiplicity="1" />
+    <End Role="APP_VI_INVESTIGATION_FILES" Type="Self.APP_VI_INVESTIGATION_FILES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_INVESTIGATIONS">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_INVESTIGATION_FILES">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_INVESTIGA_INVESTIGAT_FK">
+    <End Role="APP_VI_INVESTIGATIONS" Type="Self.APP_VI_INVESTIGATIONS" Multiplicity="1" />
+    <End Role="APP_VI_INVESTIGA_INVESTIGATORS" Type="Self.APP_VI_INVESTIGA_INVESTIGATORS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_INVESTIGATIONS">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_INVESTIGA_INVESTIGATORS">
+        <PropertyRef Name="INVESTIGATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_VI_INVESTIGATIONS_CRIME_FK">
+    <End Role="APP_VI_CRIMES" Type="Self.APP_VI_CRIMES" Multiplicity="1" />
+    <End Role="APP_VI_INVESTIGATIONS" Type="Self.APP_VI_INVESTIGATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP_VI_CRIMES">
+        <PropertyRef Name="CRIME_ID" />
+      </Principal>
+      <Dependent Role="APP_VI_INVESTIGATIONS">
+        <PropertyRef Name="CRIME_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelInformanteStoreContainer">
+    <EntitySet Name="APP_VI_CONTRIBUTIONS" EntityType="Self.APP_VI_CONTRIBUTIONS" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_CONTRIBUTIONS_FILES" EntityType="Self.APP_VI_CONTRIBUTIONS_FILES" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_CRIMES" EntityType="Self.APP_VI_CRIMES" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_INFORMANTS" EntityType="Self.APP_VI_INFORMANTS" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_INVESTIGA_INVESTIGATORS" EntityType="Self.APP_VI_INVESTIGA_INVESTIGATORS" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_INVESTIGATION_FILES" EntityType="Self.APP_VI_INVESTIGATION_FILES" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_INVESTIGATIONS" EntityType="Self.APP_VI_INVESTIGATIONS" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <EntitySet Name="APP_VI_INVESTIGATORS" EntityType="Self.APP_VI_INVESTIGATORS" Schema="USR_DENENLINEA_APP" store:Type="Tables" />
+    <AssociationSet Name="APP_VI_CONTRIBUTIONS_FILES__FK" Association="Self.APP_VI_CONTRIBUTIONS_FILES__FK">
+      <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
+      <End Role="APP_VI_CONTRIBUTIONS_FILES" EntitySet="APP_VI_CONTRIBUTIONS_FILES" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_CONTRIBUTIONS_INFO_FK" Association="Self.APP_VI_CONTRIBUTIONS_INFO_FK">
+      <End Role="APP_VI_INFORMANTS" EntitySet="APP_VI_INFORMANTS" />
+      <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_CONTRIBUTIONS_INV_FK" Association="Self.APP_VI_CONTRIBUTIONS_INV_FK">
+      <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
+      <End Role="APP_VI_CONTRIBUTIONS" EntitySet="APP_VI_CONTRIBUTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_INVEST_INVESTIGATOR_FK" Association="Self.APP_VI_INVEST_INVESTIGATOR_FK">
+      <End Role="APP_VI_INVESTIGATORS" EntitySet="APP_VI_INVESTIGATORS" />
+      <End Role="APP_VI_INVESTIGA_INVESTIGATORS" EntitySet="APP_VI_INVESTIGA_INVESTIGATORS" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_INVESTIGA_FILE_INV_FK" Association="Self.APP_VI_INVESTIGA_FILE_INV_FK">
+      <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
+      <End Role="APP_VI_INVESTIGATION_FILES" EntitySet="APP_VI_INVESTIGATION_FILES" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_INVESTIGA_INVESTIGAT_FK" Association="Self.APP_VI_INVESTIGA_INVESTIGAT_FK">
+      <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
+      <End Role="APP_VI_INVESTIGA_INVESTIGATORS" EntitySet="APP_VI_INVESTIGA_INVESTIGATORS" />
+    </AssociationSet>
+    <AssociationSet Name="APP_VI_INVESTIGATIONS_CRIME_FK" Association="Self.APP_VI_INVESTIGATIONS_CRIME_FK">
+      <End Role="APP_VI_CRIMES" EntitySet="APP_VI_CRIMES" />
+      <End Role="APP_VI_INVESTIGATIONS" EntitySet="APP_VI_INVESTIGATIONS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

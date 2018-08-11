@@ -24,8 +24,8 @@ namespace wsInformante.Models
         public string DESCRIPTION { get; set; }
         public Nullable<decimal> INFORMANT_ID { get; set; }
     
-        public virtual ICollection<APP_VI_CONTRIBUTIONS_FILES> APP_VI_CONTRIBUTIONS_FILES { get; set; }
         public virtual APP_VI_INFORMANTS APP_VI_INFORMANTS { get; set; }
         public virtual APP_VI_INVESTIGATIONS APP_VI_INVESTIGATIONS { get; set; }
+        public virtual ICollection<APP_VI_CONTRIBUTIONS_FILES> APP_VI_CONTRIBUTIONS_FILES { get; set; }
     }
 }

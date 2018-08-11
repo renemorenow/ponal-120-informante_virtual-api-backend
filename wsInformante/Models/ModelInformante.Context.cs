@@ -18,6 +18,7 @@ namespace wsInformante.Models
         public EntitiesInformante()
             : base("name=EntitiesInformante")
         {
+            base.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,12 +27,12 @@ namespace wsInformante.Models
         }
     
         public DbSet<APP_VI_CONTRIBUTIONS> APP_VI_CONTRIBUTIONS { get; set; }
-        public DbSet<APP_VI_CONTRIBUTIONS_FILES> APP_VI_CONTRIBUTIONS_FILES { get; set; }
         public DbSet<APP_VI_CRIMES> APP_VI_CRIMES { get; set; }
         public DbSet<APP_VI_INFORMANTS> APP_VI_INFORMANTS { get; set; }
         public DbSet<APP_VI_INVESTIGA_INVESTIGATORS> APP_VI_INVESTIGA_INVESTIGATORS { get; set; }
-        public DbSet<APP_VI_INVESTIGATION_FILES> APP_VI_INVESTIGATION_FILES { get; set; }
         public DbSet<APP_VI_INVESTIGATIONS> APP_VI_INVESTIGATIONS { get; set; }
         public DbSet<APP_VI_INVESTIGATORS> APP_VI_INVESTIGATORS { get; set; }
+        public DbSet<APP_VI_CONTRIBUTIONS_FILES> APP_VI_CONTRIBUTIONS_FILES { get; set; }
+        public DbSet<APP_VI_INVESTIGATION_FILES> APP_VI_INVESTIGATION_FILES { get; set; }
     }
 }
